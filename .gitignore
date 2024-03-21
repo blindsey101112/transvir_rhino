@@ -50,3 +50,5 @@ rsconnect/
 
 # output files
 output/processed_data/aligned_reads/barcode*
+output/variants/barcode*
+output/coverage/barcode*
