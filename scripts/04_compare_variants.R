@@ -4,6 +4,8 @@ library(dplyr)
 ####
 ## Find unique variants per barcode to see if these are different samples or contaimination
 ####
+
+## Get variants
 barcode3 <- read.vcfR("./output/variants/barcode3.vcf", verbose = FALSE )
 barcode3 <-as.data.frame(barcode3@fix)
 barcode3$variant <- paste0(barcode3$POS, "_", barcode3$ALT)
@@ -19,6 +21,7 @@ barcode6 <-as.data.frame(barcode6@fix)
 barcode6$variant <- paste0(barcode6$POS, "_", barcode6$ALT)
 barcode6$QUAL <- as.numeric(barcode6$QUAL)
 
+## Get unique variants
 
 barcode3_unique <- 
     barcode3 %>%
